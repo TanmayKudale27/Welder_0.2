@@ -1,0 +1,65 @@
+.topbar-wrapper {
+  background: #153857;
+  color: #fff;
+  display: none;
+}
+@media (min-width: 1024px) {
+  .topbar-wrapper {
+    display: block;
+    animation: fadeIn 0.7s;
+  }
+}
+.topbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.topbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #fff;
+  margin: 0;
+}
+.topbar-info {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  gap: 25px;
+  font-size: 0.95rem;
+}
+.topbar-info span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #dde6ef;
+}
+.topbar-social {
+  margin-left: 30px;
+  display: flex;
+  gap: 12px;
+}
+.topbar-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  color: #153857;
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: 0.2s all;
+  text-decoration: none;
+}
+.topbar-social a:hover {
+  background: #1751aa;
+  color: #fff;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0px); }
+}

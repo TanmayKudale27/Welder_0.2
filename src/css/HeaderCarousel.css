@@ -1,0 +1,147 @@
+/* HeaderCarousel.css */
+
+/* Container padding/margin */
+.container-fluid.p-0 {
+  padding: 0 !important;
+}
+
+.mb-6 {
+  margin-bottom: 3.75rem !important; /* Adjust as needed */
+}
+
+/* Animate.css fadeIn class assumed loaded */
+
+/* Carousel Indicators (thumbnail buttons) */
+.carousel-indicators {
+  position: static; /* So thumbnails appear below carousel */
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  padding-left: 0;
+  list-style: none;
+}
+
+.carousel-indicators button {
+  border: none;
+  padding: 0;
+  width: 80px;
+  height: 45px;
+  opacity: 0.6;
+  overflow: hidden;
+  border-radius: 6px;
+  transition: opacity 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.carousel-indicators button.active,
+.carousel-indicators button:hover {
+  opacity: 1;
+  box-shadow: 0 0 8px rgba(21, 56, 87, 0.6);
+}
+
+.carousel-indicators button img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+}
+
+/* Carousel Items */
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Carousel Caption Styling */
+.carousel-caption {
+  bottom: 20%; /* Raise caption up from bottom */
+  text-shadow: 0 0 15px rgba(0,0,0,0.7);
+  text-align: center;
+}
+
+.carousel-caption h1 {
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  line-height: 1.1;
+  font-size: 4.5rem; /* adjust as needed */
+}
+
+.carousel-caption .btn-primary {
+  background-color: #153857; /* Your primary color */
+  border-color: #153857;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  box-shadow: 0 4px 6px rgb(21 56 87 / 0.3);
+}
+
+.carousel-caption .btn-primary:hover,
+.carousel-caption .btn-primary:focus {
+  background-color: #1751aa;
+  border-color: #1751aa;
+  box-shadow: 0 6px 12px rgb(23 81 170 / 0.5);
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Responsive Styles */
+@media (max-width: 991.98px) {
+  .carousel-caption h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .carousel-caption {
+    bottom: 15%;
+    padding: 0 1rem;
+  }
+
+  .carousel-caption h1 {
+    font-size: 2rem;
+  }
+
+  .carousel-indicators button {
+    width: 60px;
+    height: 35px;
+  }
+}
+
+/* Add Animate.css classes if needed. 
+   If Animate.css is loaded, these classes will animate the carousel captions. 
+   Else you can define custom animation keyframes or transitions.
+*/
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.zoomIn {
+  animation-name: zoomIn;
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Optional: Override default Bootstrap carousel control colors if you add controls */
+/*
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(100%);
+}
+*/
